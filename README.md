@@ -1,6 +1,6 @@
 # Dotfiles
 
-###Prerequisites
+### Prerequisites
 * Zsh
 * [Oh-My-Zsh](https://ohmyz.sh/)
 * [NeoVim](https://neovim.io/)
