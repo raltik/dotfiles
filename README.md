@@ -1,5 +1,7 @@
 # Dotfiles
 
+Execute script 'install.sh'
+
 ### Prerequisites
 * Zsh
 * [Oh-My-Zsh](https://ohmyz.sh/)
