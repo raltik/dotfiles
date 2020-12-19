@@ -27,7 +27,7 @@ DOT=$HOME/code/dotfiles
 cp $DOT/zsh $HOME/.sources
 cp $DOT/nvim/init.vim $HOME/.config/nvim
 cp $DOT/fonts/* $HOME/.local/share/fonts
-cp $DOT/p10k.zshr $HOME/.p10k.zsh
+cp $DOT/p10k.zsh $HOME/.p10k.zsh
 cp $DOT/zshrc $HOME/.zshrc
 
 chsh -s $(which zsh)

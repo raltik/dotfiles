@@ -74,5 +74,8 @@ let g:NERDTreeIndicatorMapCustom = {
 syntax on
 filetype plugin indent on
 
-colorscheme gruvbox8_hard
+set background=dark
+colorscheme gruvbox8
+
+autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif 
 
