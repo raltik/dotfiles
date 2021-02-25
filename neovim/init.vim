@@ -1,23 +1,30 @@
 call plug#begin()
-Plug 'arcticicestudio/nord-vim'
-Plug 'joshdick/onedark.vim'
-Plug 'lifepillar/vim-gruvbox8'
+Plug 'rakr/vim-one'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 set autoread
 set number " Show number lines
 set autoindent
+set smartindent
 
 set smarttab
+set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set shiftround
 
+set textwidth=120
+
 set t_Co=256
+
+set showmatch
+
+set comments=sl:/*,mb:\ *,elx:\ */
 
 if &term =~ '256color'
 	set t_ut=
@@ -71,11 +78,32 @@ let g:NERDTreeIndicatorMapCustom = {
 
 " NERDTree
 
+
 syntax on
 filetype plugin indent on
 
 set background=dark
-colorscheme gruvbox8
+colorscheme one
 
 autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif 
+
+let &path.="src/include,../include,include,/usr/include/AL"
+
+" coc config
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-tsserver',
+  \ 'coc-eslint', 
+  \ 'coc-prettier', 
+  \ 'coc-json', 
+  \ ]
+
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 

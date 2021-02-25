@@ -22,16 +22,9 @@ alias src="source ~/.zshrc"
 
 ####################################
 ####     PATH
-export PATH=$PATH:/mod/.local/netcdf/bin
-export PATH=$PATH:/opt/eclipse
-export PATH=$PATH:/opt/jdk-1.8.0_212/bin
-export PATH=$PATH:$HOME/.sources/grib2/wgrib2 # WGRIB2
 export PATH=$PATH:$HOME/.sources/bin
-export PATH=$PATH:/opt/gnat/bin
-export PATH=$PATH:/opt/activemq/bin
 ####################################
 ####    VARIABLES
-export NETCDF=/mod/.local/netcdf
 export PYTHONDONTWRITEBYTECODE=1
 export LM_LICENSE_FILE=2100@lic-xilinx.upv.es
 export CC=gcc
