@@ -3,7 +3,7 @@
 sudo apt update
 
 echo -e "\n Installing packages...\n"
-sudo apt install zsh vim curl wget tmux
+sudo apt install zsh vim curl wget tmux tmuxinator
 
 echo -e "\n Installing Oh My Zsh"
 
