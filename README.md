@@ -1,2 +1,5 @@
 # Dotfiles
 
+- NeoVim
+- TMux
+
