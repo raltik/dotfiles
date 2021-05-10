@@ -1,0 +1,133 @@
+"*************************************************************
+"" PLUGINS
+"*************************************************************
+call plug#begin(expand('~/.config/nvim/plugged'))
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'morhetz/gruvbox'
+Plug 'Yggdroot/indentLine'
+
+Plug 'scrooloose/nerdtree'
+
+Plug 'ervandew/supertab'
+
+" html
+"" HTML Bundle
+Plug 'hail2u/vim-css3-syntax'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'tpope/vim-haml'
+Plug 'mattn/emmet-vim'
+
+
+" javascript
+"" Javascript Bundle
+Plug 'jelera/vim-javascript-syntax'
+Plug 'w0rp/ale'
+
+call plug#end()
+
+filetype plugin indent on
+
+"*************************************************************
+"" Basic SETUP
+"*************************************************************
+
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
+set bomb
+set binary
+
+"" Line number
+set relativenumber
+
+"" Fix backspace indent
+set backspace=indent,eol,start
+
+"" Tabs.
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
+set expandtab
+
+"" Hidden buffer
+set hidden
+
+"" Swap files
+set nobackup
+set noswapfile
+
+set fileformats=unix,dos,mac
+
+if exists('$SHELL')
+    set shell=$SHELL
+else
+    set shell=/bin/zsh
+endif
+
+"" Session management
+let g:session_directory = "~/.config/nvim/session"
+let g:session_autoload = "no"
+let g:session_autosave = "no"
+let g:session_command_aliases = 1
+
+"*************************************************************
+"" Visual Settings
+"*************************************************************
+syntax on
+set ruler
+set number
+set termguicolors
+
+colorscheme gruvbox
+
+let no_buffers_menu=1
+
+set mousemodel=popup
+set t_Co=256
+set guioptions=egmrti
+
+if has("gui_running")
+    if has("gui_mac") || has("gui_macvim")
+        set guifont=Fira\ Code:h12
+        set transparency=7
+    endif
+else
+    let g:CSApprox_loaded = 1
+    let g:indentLine_enabled = 1
+    let g:indentLine_concealcursor = 0
+    let g:indentLine_char = '┆'
+    let g:indentLine_faster = 1
+endif
+
+
+set linespace=3
+set cursorline
+
+"" Disable blinking cursor.
+set gcr=a:blinkon0
+set scrolloff=3
+
+"" Status bar
+set laststatus=2
+
+"" Use modeline overrides
+set modeline
+set modelines=10
+
+set title
+set titleold="Terminal"
+set titlestring=%F
+
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
+
+" Time based themes
+let g:nd_themes = [
+    \ ['07:00', 'hybrid', 'dark', 'hybrid'],
+    \ ['08:00', 'hybrid', 'dark', 'hybrid'],
+    \ ]
+let g:nd_airline = 1
+
+
+
