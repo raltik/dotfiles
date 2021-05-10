@@ -1,0 +1,2 @@
+source ~/.sources/aliases.zsh
+
