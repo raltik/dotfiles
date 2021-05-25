@@ -17,7 +17,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 echo -e "\n Creating directories."
 mkdir -p $HOME/.sources/bin
-
+mkdir -p $HOME/.config/nvim
 
 
 DOT=$HOME/code/dotfiles
