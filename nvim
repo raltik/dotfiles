@@ -60,6 +60,9 @@ set noswapfile
 
 set fileformats=unix,dos,mac
 
+set lazyredraw
+set ttimeoutlen=0
+
 if exists('$SHELL')
     set shell=$SHELL
 else
@@ -120,7 +123,7 @@ set title
 set titleold="Terminal"
 set titlestring=%F
 
-set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
+set statusline=(%{&ff})\ (line\ %l\/%L,\ col\ %c)\
 
 " Time based themes
 let g:nd_themes = [
@@ -129,5 +132,11 @@ let g:nd_themes = [
     \ ]
 let g:nd_airline = 1
 
-
+"**********************************************************************
+"" Airline settings
+"**********************************************************************
+"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
