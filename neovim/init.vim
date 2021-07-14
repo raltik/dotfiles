@@ -40,6 +40,9 @@ set shell=/bin/zsh
 "" Visual Settings
 "*************************************************************
 syntax on
+set dark
+colorscheme gruvbox
+
 set ruler
 set number
 set termguicolors
