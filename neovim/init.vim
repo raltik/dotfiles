@@ -35,12 +35,14 @@ set ttimeoutlen=0
 
 set shell=/bin/zsh
 
+"" Remember last position
+autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif 
 
 "*************************************************************
 "" Visual Settings
 "*************************************************************
 syntax on
-set dark
+set background=dark
 colorscheme gruvbox
 
 set ruler
