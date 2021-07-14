@@ -1,6 +1,9 @@
 # Dotfiles
 
-- NeoVim
-- TMux
+### NeoVim
+    - Gruvbox theme
+
+### Alacritty
+    - SauceCodePro fonts
 
    
