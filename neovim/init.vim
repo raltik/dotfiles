@@ -1,3 +1,12 @@
+"*******************
+" PLUGINS
+"*******************
+call plug#begin()
+Plug 'morhetz/gruvbox'
+call plug#end()
+
+"********************
+
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
@@ -31,6 +40,9 @@ set shell=/bin/zsh
 "" Visual Settings
 "*************************************************************
 syntax on
+set dark
+colorscheme gruvbox
+
 set ruler
 set number
 set termguicolors
