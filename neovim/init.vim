@@ -3,6 +3,12 @@
 "*******************
 call plug#begin()
 Plug 'morhetz/gruvbox'
+
+Plug 'oberblastmeister/neuron.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 call plug#end()
 
 "********************
@@ -37,6 +43,15 @@ set shell=/bin/zsh
 
 "" Remember last position
 autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif 
+
+"" Neuron
+require'neuron'.setup {
+    virtual_titles = true,
+    mappings = true,
+    run = nil,
+    neuron_dir = "~/neuron",
+    leader = "gz",
+}
 
 "*************************************************************
 "" Visual Settings
